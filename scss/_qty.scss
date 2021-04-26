@@ -1,0 +1,51 @@
+.page-qty{
+	main{
+		background-color:#FFEBBD;
+		height:70vh;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-columns: repeat(8, 1fr);
+
+		h1{
+    			grid-column:1 / span 4;
+    			grid-row:1;
+    			align-self:end;
+    	}
+
+    	.fryguy{
+    			grid-column: 6 / span 3;
+    			grid-row:1 / span 2;
+    			justify-self:center;
+    	}
+
+    	p{
+    		grid-column:1 / span 4;
+    		grid-row:2;
+    		align-self:start;
+    	}
+
+    	.add{
+    		grid-column:1 / span 4;
+    		grid-row:4;
+    		align-self:start;
+    		display:grid;
+    		grid-template-columns: repeat(3,1fr);
+    		svg{
+    			justify-self:center;
+    		}
+    	}
+
+    	.price{
+    		grid-column: 6 / span 3;
+    		grid-row:3;
+			justify-self:center;
+			align-self:end;    		
+    	}
+	}
+
+footer{
+	.backarrow{
+		align-self:center;;
+
+	}
+}
+}

@@ -1,0 +1,38 @@
+.page-payment{
+	main{
+		grid-template-rows: repeat(3,auto);
+		row-gap:0;
+		h2{
+			grid-column: 3 / span 4;
+			grid-row:1;
+			justify-self:center;
+			align-self:end;
+		}
+		
+		.price{
+			grid-column: 3 / span 4;
+			grid-row:2;
+			justify-self:center;
+			align-self:start;
+		}
+		
+		form{
+			display:grid;
+			grid-column: 3 / span 4;
+			grid-row:3;
+			row-gap: 1.2rem;
+			justify-self:center;
+			.credit{
+				display:grid;
+				grid-template-columns:1fr 1fr;
+				column-gap:1rem;
+			}
+			button{
+			justify-self:end;
+			
+
+			}
+		}
+
+	}
+}

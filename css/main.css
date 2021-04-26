@@ -1,0 +1,341 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #FFEBBD; }
+  body main {
+    padding: 0 5rem;
+    grid-row: 2;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 7rem);
+    grid-gap: 1rem; }
+    body main button, body main h1, body main h2, body main h3, body main h6, body main p, body main .price {
+      margin: 0;
+      padding: 0;
+      font-family: 'Source Sans Pro', sans-serif; }
+    body main a {
+      font-family: 'Roboto Condensed', sans-serif;
+      text-decoration: none; }
+
+input {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  height: 64px;
+  border: none;
+  color: #848484;
+  width: 100%;
+  padding-left: 1.25rem; }
+
+.page-cart main {
+  height: 20vh;
+  grid-template-rows: 1fr 1fr; }
+  .page-cart main h2 {
+    grid-column: 1/-1;
+    justify-self: center;
+    grid-row: 1; }
+  .page-cart main .qty {
+    grid-column: 4;
+    grid-row: 2;
+    justify-self: center; }
+  .page-cart main .price {
+    grid-column: 5;
+    grid-row: 2;
+    justify-self: center; }
+  .page-cart main h6 {
+    grid-column: 7 / span 2;
+    grid-row: 2;
+    justify-self: end; }
+
+.page-payment main {
+  grid-template-rows: repeat(3, auto);
+  row-gap: 0; }
+  .page-payment main h2 {
+    grid-column: 3 / span 4;
+    grid-row: 1;
+    justify-self: center;
+    align-self: end; }
+  .page-payment main .price {
+    grid-column: 3 / span 4;
+    grid-row: 2;
+    justify-self: center;
+    align-self: start; }
+  .page-payment main form {
+    display: grid;
+    grid-column: 3 / span 4;
+    grid-row: 3;
+    row-gap: 1.2rem;
+    justify-self: center; }
+    .page-payment main form .credit {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1rem; }
+    .page-payment main form button {
+      justify-self: end; }
+
+.page-confirm {
+  height: 80vh; }
+  .page-confirm main {
+    align-items: center;
+    grid-template-rows: repeat(2, auto); }
+    .page-confirm main h1 {
+      grid-row: 1;
+      grid-column: 1 / span 3;
+      justify-self: center;
+      align-self: end; }
+    .page-confirm main h2 {
+      grid-row: 2;
+      grid-column: 1 / span 3;
+      justify-self: center;
+      align-self: statrt; }
+    .page-confirm main .logo {
+      grid-column: 4 / span 5;
+      grid-row: 1/-1;
+      justify-self: center;
+      align-self: center; }
+
+.overlay {
+  height: 100vh;
+  display: grid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  transition: transform .4s;
+  z-index: 0;
+  opacity: 0; }
+
+.page-home main {
+  background-color: #FFEBBD;
+  z-index: 1;
+  height: 90vh;
+  grid-template-rows: 1fr 1fr; }
+  .page-home main .top {
+    grid-row: 1;
+    grid-column: -1/1;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat 3, auto; }
+    .page-home main .top h1 {
+      grid-column: 1 / span 2;
+      grid-row: 1;
+      align-self: end; }
+    .page-home main .top .fryguy {
+      grid-column: 5 / span 4;
+      grid-row: 1 / span 3;
+      max-width: 300px;
+      justisfy-self: center; }
+    .page-home main .top h2 {
+      grid-column: 1 / span 4;
+      grid-row: 2;
+      align-self: start; }
+    .page-home main .top p {
+      grid-column: 1 / span 4;
+      grid-row: 3;
+      align-self: start; }
+  .page-home main .bottom {
+    margin-top: -5rem;
+    grid-column: -1/1;
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: repeat(3, auto); }
+    .page-home main .bottom .card {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      display: grid; }
+      .page-home main .bottom .card .image {
+        grid-column: 1;
+        width: 250px; }
+        .page-home main .bottom .card .image img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover; }
+      .page-home main .bottom .card .text {
+        border-bottom: 2px solid  #A52626;
+        padding: 1rem;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-column: 2; }
+        .page-home main .bottom .card .text h1 {
+          margin: 0;
+          align-self: end; }
+        .page-home main .bottom .card .text p {
+          margin: 0;
+          align-self: start; }
+
+.page-login main {
+  height: 60vh;
+  grid-template-rows: auto auto auto; }
+  .page-login main .logo {
+    grid-column: 3 / span 4;
+    justify-self: center;
+    grid-row: 1; }
+  .page-login main h2 {
+    grid-column: -1/1;
+    grid-row: 2;
+    align-self: start;
+    justify-self: center; }
+  .page-login main .buttons-main {
+    grid-column: -1/1;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: auto auto; }
+
+.page-new .signupform {
+  grid-column: 1 / span 8;
+  grid-row: 3; }
+  .page-new .signupform form {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 1.5rem; }
+    .page-new .signupform form input[name="email"] {
+      grid-row: 1;
+      grid-column: 2 / span 3; }
+    .page-new .signupform form input[name="username"] {
+      grid-row: 2;
+      grid-column: 2 / span 3; }
+    .page-new .signupform form input[name="cellphone"] {
+      grid-row: 3;
+      grid-column: 2 / span 3; }
+    .page-new .signupform form button {
+      grid-row: 2 / span 2;
+      grid-column: 6 / span 2; }
+
+footer {
+  grid-template-columns: 1fr 1fr; }
+  footer :nth-child(1) {
+    text-decoration: none;
+    font-size: 40px;
+    color: #A52626; }
+  footer :nth-child(2) {
+    justify-self: end; }
+
+.page-qty main {
+  background-color: #FFEBBD;
+  height: 70vh;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(8, 1fr); }
+  .page-qty main h1 {
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    align-self: end; }
+  .page-qty main .fryguy {
+    grid-column: 6 / span 3;
+    grid-row: 1 / span 2;
+    justify-self: center; }
+  .page-qty main p {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+    align-self: start; }
+  .page-qty main .add {
+    grid-column: 1 / span 4;
+    grid-row: 4;
+    align-self: start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+    .page-qty main .add svg {
+      justify-self: center; }
+  .page-qty main .price {
+    grid-column: 6 / span 3;
+    grid-row: 3;
+    justify-self: center;
+    align-self: end; }
+.page-qty footer .backarrow {
+  align-self: center; }
+
+.page-returning main, .page-new main {
+  height: 60vh;
+  grid-template-rows: 1fr 1fr 1fr; }
+  .page-returning main h1, .page-new main h1 {
+    grid-column: 1 / span 4;
+    justify-self: start;
+    grid-row: 1; }
+  .page-returning main h2, .page-new main h2 {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+    justify-self: start;
+    align-self: start; }
+  .page-returning main .fry, .page-new main .fry {
+    grid-column: 5 / span 4;
+    grid-row: 1 / span 3;
+    justify-self: center;
+    align-self: start; }
+  .page-returning main .signinform, .page-new main .signinform {
+    grid-column: 1 / span 8;
+    grid-row: 3; }
+    .page-returning main .signinform form, .page-new main .signinform form {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: 1fr 1fr;
+      row-gap: 1.5rem; }
+      .page-returning main .signinform form input[name="username"], .page-new main .signinform form input[name="username"] {
+        grid-row: 1;
+        grid-column: 2 / span 3; }
+      .page-returning main .signinform form input[name="cellphone"], .page-new main .signinform form input[name="cellphone"] {
+        grid-row: 2;
+        grid-column: 2 / span 3; }
+      .page-returning main .signinform form button, .page-new main .signinform form button {
+        grid-row: 1 / span 2;
+        grid-column: 6 / span 2; }
+.page-returning footer, .page-new footer {
+  grid-template-columns: 1fr 1fr; }
+  .page-returning footer :nth-child(1), .page-new footer :nth-child(1) {
+    text-decoration: none;
+    font-size: 40px;
+    color: #A52626; }
+  .page-returning footer :nth-child(2), .page-new footer :nth-child(2) {
+    justify-self: end; }
+
+footer {
+  height: 10.5rem;
+  align-self: end;
+  width: 100vw;
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  column-gap: 1rem;
+  background-color: #F0DDB2;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  align-items: center;
+  padding: 0 5rem; }
+  footer .backarrow {
+    display: grid;
+    place-items: center;
+    width: 26px; }
+  footer :nth-child(2) {
+    line-height: 1;
+    text-decoration: none;
+    font-size: 40px;
+    color: #A52626; }
+  footer :nth-child(3) {
+    justify-self: end; }
+
+header {
+  align-self: end;
+  width: 100vw;
+  grid-row: 1;
+  display: grid;
+  align-self: start;
+  justify-items: center; }
+  header h1 {
+    border-bottom: 8px solid #4E9391;
+    padding-top: 7.5rem;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 72px; }
+
+/*# sourceMappingURL=main.css.map */

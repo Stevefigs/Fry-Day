@@ -1,0 +1,60 @@
+*{ 
+	box-sizing:border-box;
+}
+
+body{
+  height:100vh;
+  display:grid;
+  place-items:center;
+  margin:0;
+  padding:0;
+  background-color:#FFEBBD;
+
+  main{
+    padding:0 5rem;
+    grid-row:2;
+  	height:100%;
+    display:grid;
+    grid-template-columns: repeat(8, 7rem);
+    grid-gap:1rem;
+
+    button,h1, h2, h3, h6, p, .price{
+      margin:0;
+      padding:0;
+    	font-family: 'Source Sans Pro', sans-serif;
+    	}
+
+    a{
+    	font-family: 'Roboto Condensed', sans-serif;
+    	text-decoration:none;
+    	}
+
+    }
+}
+
+input{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size:48px;
+  font-weight:700;
+  height:64px;
+  border:none;
+  color:#848484;
+  width:100%;
+  padding-left:1.25rem;
+}
+
+
+@import 'vars';
+@import 'cart';
+@import 'checkout';
+@import 'confirm';
+@import 'home';
+@import 'index';
+@import 'new';
+@import 'qty';
+@import 'returning';
+@import 'links';
+@import 'forms';
+@import 'footers';
+@import 'headers';
+
