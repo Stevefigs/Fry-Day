@@ -1,3 +1,21 @@
+
+@import 'vars';
+@import 'cart';
+@import 'checkout';
+@import 'confirm';
+@import 'home';
+@import 'index';
+@import 'new';
+@import 'qty';
+@import 'returning';
+@import 'links';
+@import 'forms';
+@import 'footers';
+@import 'headers';
+@import 'menu';
+@import 'headings';
+
+
 *{ 
 	box-sizing:border-box;
 }
@@ -42,19 +60,4 @@ input{
   width:100%;
   padding-left:1.25rem;
 }
-
-
-@import 'vars';
-@import 'cart';
-@import 'checkout';
-@import 'confirm';
-@import 'home';
-@import 'index';
-@import 'new';
-@import 'qty';
-@import 'returning';
-@import 'links';
-@import 'forms';
-@import 'footers';
-@import 'headers';
 

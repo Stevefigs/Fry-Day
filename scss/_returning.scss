@@ -1,11 +1,11 @@
 .page-returning, .page-new{
 
 	main{
-		height:60vh;
+		height:70vh;
 		grid-template-rows: 1fr 1fr 1fr;
 
 		h1{
-			grid-column: 1 / span 4;
+			grid-column: 1 / span 5;
 			justify-self:start;
 			grid-row:1;
 		}

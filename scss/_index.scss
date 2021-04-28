@@ -1,29 +1,55 @@
 .page-login{
 
 	main{
-		height:60vh;
-		grid-template-rows: auto auto auto;
+		height:90vh;
+		grid-template-rows: 1fr 1fr 1fr;
 		.logo{
 			grid-column: 3 / span 4;
 			justify-self:center;
+			align-self:start;
 			grid-row:1;
+			width:528px;
 		}
 		h2{
 			grid-column: -1/1;
 			grid-row:2;
-			align-self:start;
+			align-self:center;
 			justify-self:center;
+			font-size: 2rem;
+			transform-text:uppercase;
 }
 
 		.buttons-main{
-			grid-column: -1/1;
+			grid-column: 1 / span 8;
 			grid-row:3;
-			align-self:center;
+			align-self:start;
 			justify-self:center;
 			display:grid;
-			grid-template-columns: auto auto;		}
+			grid-template-columns: 1fr 1fr;
+			width:90%;
+
+			a:nth-child(1){
+			padding: 11px 17px;
+			align-self: center;
+			background-image: url(../img/redbutton.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			font-size: 40px;
+			font-weight: 700;
+			line-height: 2;
+			color: #FFEBBD;			}
+			a:nth-child(2){
+				padding: 20px 29px;
+				font-size: 40px;
+				font-weight: 700;
+				align-self: center;
+				background-image: url(../img/greenbutton.svg);
+				background-size: contain;
+				background-repeat: no-repeat;
+				justify-self: end;
+				color: #FFEBBD;
+			}
+
+		}
 	}
-
-
-
 }
